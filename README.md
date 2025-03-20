@@ -8,6 +8,11 @@ BoletoFraudAI is an **AI-powered fraud detection system** that analyzes **boleto
 
 ---
 
+## 🎬 **Demo Video**
+Watch our [demonstration video](https://drive.google.com/file/d/1AVBRhWJO-8VydZOsajObe9PA5vIhllA2/view?usp=sharing) to see BoletoFraudAI in action!
+
+---
+
 ## 🛠 **Technologies Used**
 - **Python** 🐍  
 - **Streamlit** 🌟 (for user interface)
