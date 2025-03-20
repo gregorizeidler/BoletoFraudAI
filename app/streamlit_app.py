@@ -183,4 +183,4 @@ for tip, desc in tips.items():
 
 # Footer
 st.markdown("---")
-st.caption("BoletoFraudAI - Developed with Streamlit, FastAPI and OpenCV") 
+st.caption("BoletoFraudAI - Developed with Streamlit and OpenCV") 
