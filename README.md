@@ -63,7 +63,25 @@ The Streamlit interface will open automatically in your browser.
 ✅ **Edge detection & contrast analysis** to find manipulated areas  
 ✅ **Validates barcode & format** against official patterns  
 ✅ **Visual highlighting** of suspicious areas with detailed explanations
-✅ **Fast & lightweight** (built with Streamlit & OpenCV)   
+✅ **Fast & lightweight** (built with Streamlit & OpenCV)  
+
+---
+
+## 🛣️ **Roadmap**
+- [ ] Machine learning model for more accurate fraud detection
+- [ ] Multi-language support (Portuguese/English)
+- [ ] Improved image preprocessing for better OCR results
+- [ ] Mobile-friendly responsive design
+- [ ] User feedback collection
+
+---
+
+## 🤝 **How to Contribute**
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ---
 
