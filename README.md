@@ -1,6 +1,6 @@
 # 📌 **BoletoFraudAI - Fake Boleto Detector** 🚀  
 
-BoletoFraudAI is an **AI-powered fraud detection system** that analyzes **boletos bancários** (Brazilian payment slips) to identify **fake, tampered, or manipulated documents** before payment. Using **OCR (Tesseract), OpenCV, and FastAPI**, it detects:  
+BoletoFraudAI is an **AI-powered fraud detection system** that analyzes **boletos bancários** (Brazilian payment slips) to identify **fake, tampered, or manipulated documents** before payment. Using **OCR (Tesseract), OpenCV, and Streamlit**, it detects:  
 ✅ **Fake boletos** with invalid barcodes  
 ✅ **Altered boletos** (e.g., edited text, different fonts)  
 ✅ **Tampered barcodes** (manually modified digits)  
@@ -10,11 +10,10 @@ BoletoFraudAI is an **AI-powered fraud detection system** that analyzes **boleto
 
 ## 🛠 **Technologies Used**
 - **Python** 🐍  
-- **FastAPI** 🚀 (for API)  
+- **Streamlit** 🌟 (for user interface)
 - **OpenCV** 📷 (for image processing)  
 - **Tesseract OCR** 🧐 (for text extraction)  
-- **Pydantic** 📦 (data validation)  
-- **Docker** 🐳 (for deployment)  
+- **NumPy** 📊 (for numerical processing)
 
 ---
 
@@ -22,15 +21,11 @@ BoletoFraudAI is an **AI-powered fraud detection system** that analyzes **boleto
 ```
 BoletoFraudAI/
 │── app/
-│   ├── main.py             # FastAPI application
+│   ├── streamlit_app.py    # Streamlit user interface
 │   ├── services.py         # Boleto fraud detection logic
 │   ├── utils.py            # Helper functions (image processing, text validation)
-│── tests/
-│   ├── test_services.py    # Unit tests for fraud detection
 │── requirements.txt        # Dependencies
 │── README.md               # Documentation
-│── Dockerfile              # Containerization setup
-│── examples/               # Sample valid and fake boletos
 ```
 
 ---
@@ -42,71 +37,38 @@ git clone https://github.com/your-username/BoletoFraudAI.git
 cd BoletoFraudAI
 ```
 
-### 2️⃣ **Create a Virtual Environment & Install Dependencies**
+### 2️⃣ **Install Dependencies**
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+# Install Python if you don't have it
+python3 -m pip install -r requirements.txt
+
+# Install Tesseract OCR
+# On macOS:
+brew install tesseract
+# On Ubuntu/Debian:
+# sudo apt-get install tesseract-ocr
 ```
 
-### 3️⃣ **Run the API Server**
+### 3️⃣ **Run the Application**
 ```bash
-uvicorn app.main:app --reload
+streamlit run app/streamlit_app.py
 ```
-
-### 4️⃣ **Use the API**
-- Open **Swagger UI**: [`http://127.0.0.1:8000/docs`](http://127.0.0.1:8000/docs)  
-- Upload a **boleto image** via the `/detect/` endpoint.  
-- The response will indicate whether the boleto is **valid** or **fraudulent**.
+The Streamlit interface will open automatically in your browser.
 
 ---
 
-## 🔍 **Example API Response**
-### ✅ **Valid Boleto**
-```json
-{
-    "fraud_detected": false,
-    "message": "Boleto appears to be valid."
-}
-```
-
-### ❌ **Fake or Edited Boleto**
-```json
-{
-    "fraud_detected": true,
-    "message": "Potential fraud detected: Invalid barcode | Potential image manipulation detected"
-}
-```
-
----
-
-## 🧪 **Running Tests**
-```bash
-pytest tests/
-```
-
----
-
-## 📦 **Docker Deployment**
-### 🏗 **Build & Run**
-```bash
-docker build -t boletofraudai .
-docker run -p 8000:8000 boletofraudai
-```
-
----
-
-## 🎯 **Features**
+## 🔍 **Features**
+✅ **User-friendly Streamlit interface** for easy boleto analysis
 ✅ **Detects altered boletos** (e.g., different fonts, pasted text)  
 ✅ **Edge detection & contrast analysis** to find manipulated areas  
 ✅ **Validates barcode & format** against official patterns  
-✅ **Easy API integration** for payment systems  
-✅ **Fast & lightweight** (built with FastAPI & OpenCV)  
+✅ **Visual highlighting** of suspicious areas with detailed explanations
+✅ **Fast & lightweight** (built with Streamlit & OpenCV)  
 
 ---
 
 ## ⚖️ **License**
 This project is **open-source** under the **MIT License**. Feel free to use, modify, and contribute!  
 
-📢 **Contributions are welcome!** If you have ideas or improvements, submit a pull request. 🚀  
+📢 **Contributions are welcome!** If you have ideas or improvements, submit a pull request. 🚀
 
