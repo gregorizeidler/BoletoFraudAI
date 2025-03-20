@@ -63,7 +63,7 @@ The Streamlit interface will open automatically in your browser.
 ✅ **Edge detection & contrast analysis** to find manipulated areas  
 ✅ **Validates barcode & format** against official patterns  
 ✅ **Visual highlighting** of suspicious areas with detailed explanations
-✅ **Fast & lightweight** (built with Streamlit & OpenCV)  
+✅ **Fast & lightweight** (built with Streamlit & OpenCV)   
 
 ---
 
